@@ -1,0 +1,12 @@
+
+.hot {
+  color:red;
+}
+
+.large {
+  font-size:60px;
+}
+
+.hidden {
+  visibility: hidden;
+}
