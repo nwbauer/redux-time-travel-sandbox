@@ -1,4 +1,4 @@
-const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -7,11 +7,14 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
   },
+  devServer: {
+    contentBase: './build'
+  },
   module: {
     loaders: [
       {
         test: /\.css$/,
-        loader: 'style!css',
+        loader: 'style-loader!css-loader',
       }, {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -22,4 +25,10 @@ module.exports = {
       },
     ],
   },
+  plugins:[
+    new HtmlWebpackPlugin({
+      template:'./src/index.html',
+      filename:'./index.html',
+    })
+  ]
 };
