@@ -29,7 +29,6 @@ class Exercise extends Component {
   }
 
   render() {
-    var ContainerizedWidget = <WidgetContainer widget={TextInputWidget} />;
     return <div>
       <h1>Some Questions</h1>
       <WidgetContainer

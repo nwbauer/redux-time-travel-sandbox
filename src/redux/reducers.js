@@ -14,7 +14,6 @@ const initialState = {
 };
 
 const widgetUpdate = (state = initialState.widgets, action) => {
-  console.log('???', action);
   var actions = {
     UPDATE_WIDGET(userName) {
       var newState = Object.assign({}, state[action.id], action.state);
